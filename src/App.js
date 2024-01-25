@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import HeroBg from "./images/doctor-hero.png"
+import Testimonials from './components/Testimonials';
 import './App.css';
 
 function App() {
+
+  const myStyle = { 
+    backgroundImage: `url(${HeroBg})`
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "w-full min-h-screen bg-zinc-900" >
+     
+
+      <div style={myStyle} className='bg-cover bg-no-repeat w-full'>
+      <Header/>
+      <Hero/>
+      
+      </div>
+      <Testimonials/>
+      
     </div>
   );
 }
