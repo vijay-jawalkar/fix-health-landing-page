@@ -24,19 +24,19 @@ const [nav, setNav] = useState(false)
         </div>
 
        {/* laptop version navigation list */}
-        <nav className="hidden md:flex gap-6 items-center text-zinc-700 font-medium">
-          <span className="cursor-pointer hover:text-zinc-800"> Home</span>
-          <span className="cursor-pointer hover:text-zinc-800"> Services</span>
-          <span className="cursor-pointer hover:text-zinc-800"> Blogs</span>
-          <span className="cursor-pointer hover:text-zinc-800"> About</span>
+        <nav className="hidden md:flex gap-6 items-center text-zinc-50 font-medium">
+          <span className="cursor-pointer hover:text-zinc-200"> Home</span>
+          <span className="cursor-pointer hover:text-zinc-200"> Services</span>
+          <span className="cursor-pointer hover:text-zinc-200"> Blogs</span>
+          <span className="cursor-pointer hover:text-zinc-200"> About</span>
 
-          <button className="bg-cyan-600 py-2 px-3 text-sm rounded-md font-semibold hover:bg-cyan-500 text-zinc-100"> Book Now</button>
+          <button className="bg-fuchsia-600 py-2 px-3 text-sm rounded-md font-semibold hover:bg-fuchsia-500 text-zinc-100"> Book Now</button>
         </nav>
 
         {/* mobile version navigation list */}
         <div 
         onClick={() => setNav(true)}
-        className="text-zinc-600 text-2xl md:hidden ">
+        className="text-zinc-800 text-2xl md:hidden ">
          <FaBars />
        
         </div>

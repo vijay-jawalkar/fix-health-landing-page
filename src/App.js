@@ -1,6 +1,6 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import HeroBg from "./images/doctor-hero.png"
+import HeroBg from "./images/doctor-2.jpg"
 import Testimonials from './components/Testimonials';
 import './App.css';
 
