@@ -19,7 +19,7 @@ function Hero() {
       useEffect(() => {
         async function getDoctorsDetails(){
           
-            const response = await fetch(`http://localhost:5000/doctors`);
+            const response = await fetch(`${process.env.REACT_APP_HOST}/doctors`);
             const json = await response.json();
 
             const filterDoctors = () => {
@@ -73,7 +73,7 @@ function Hero() {
         body: JSON.stringify(appointmentDetail)
       }
 
-      const response = await fetch(`http://localhost:5000/appointment`, requestOption)
+      const response = await fetch(`${process.env.REACT_APP_HOST}/appointment`, requestOption)
      
 
       if(!response.ok){
