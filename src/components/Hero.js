@@ -19,9 +19,10 @@ function Hero() {
       useEffect(() => {
         async function getDoctorsDetails(){
           
-            const response = await fetch(`${process.env.REACT_APP_HOST}/doctors`);
+        
+            const response = await fetch("https://fix-health-server.onrender.com/doctors");
             const json = await response.json();
-
+            console.log(json)
             const filterDoctors = () => {
                 const filteredDoctors = json.filter( (item) => {
                     return item.city === formData.city.toLowerCase()
@@ -72,8 +73,8 @@ function Hero() {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(appointmentDetail)
       }
-
-      const response = await fetch(`${process.env.REACT_APP_HOST}/appointment`, requestOption)
+      
+      const response = await fetch(`https://fix-health-server.onrender.com/appointment`, requestOption)
      
 
       if(!response.ok){
