@@ -80,7 +80,7 @@ function Hero() {
         throw { message: response.statusText, status: response.status};  //eslint-disable-line
     }
   
-      const data = await response.json();
+      const data = await response.json(); //eslint-disable-line
     //   console.log(data)
     
 
