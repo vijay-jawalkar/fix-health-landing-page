@@ -45,7 +45,7 @@ function Testimonials() {
   };
 
   return (
-    <div className="w-[90vw] mx-auto">
+    <div className="w-[90vw] mx-auto my-8">
       <h2 className="text-cyan-600 text-3xl md:text-4xl font-semibold text-center py-4">
         Patient Recovery Stories
       </h2>

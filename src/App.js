@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import HeroBg from "./images/doctor-2.jpg"
 import Testimonials from './components/Testimonials';
+import DoctorsList from './components/DoctorsList';
 import './App.css';
 
 function App() {
@@ -17,8 +18,8 @@ function App() {
       <div style={myStyle} className='bg-cover bg-no-repeat w-full'>
       <Header/>
       <Hero/>
-      
       </div>
+      <DoctorsList/>
       <Testimonials/>
       
     </div>
