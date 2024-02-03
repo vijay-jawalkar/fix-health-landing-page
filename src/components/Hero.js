@@ -1,5 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react";
-import { Loading } from "./Loading";
+import React, { useState, useEffect } from "react";
 import { useLocation} from "react-router-dom"
 
 
@@ -28,7 +27,7 @@ function Hero() {
       setStep(4)
     }
    
-  }, [q])
+  }, [q]) // eslint-disable-line
 
   useEffect(() => {
 
