@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import DoctorCard from './DoctorCard'
+import React, { useState, useEffect, Suspense } from 'react'
+import { lazy } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Loading } from './Loading';
+const DoctorCard = lazy(() => import('./DoctorCard'))
+
 
 function DoctorsList() {
     const [doctors, setDoctors] = useState([]);
@@ -13,7 +16,7 @@ function DoctorsList() {
         
             const response = await fetch("https://fix-health-server.onrender.com/doctors");
             const json = await response.json();
-            console.log(json)
+            // console.log(json)
             setDoctors(json)
            
             }
@@ -70,6 +73,8 @@ function DoctorsList() {
       </h4>
 
 
+
+      <Suspense fallback={<Loading/>}>
       <div className='mx-auto w-11/12  my-8'>
      <Slider {...settings}>
         {
@@ -81,6 +86,8 @@ function DoctorsList() {
       
       
         </div>
+      </Suspense>
+    
     </div>
   )
 }

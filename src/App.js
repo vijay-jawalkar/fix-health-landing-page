@@ -1,9 +1,14 @@
+import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import HeroBg from "./images/doctor-2.jpg"
+import './App.css';
 import Testimonials from './components/Testimonials';
 import DoctorsList from './components/DoctorsList';
-import './App.css';
+import AllRoutes from './routes/AllRoutes';
+
+
+
 
 function App() {
 
@@ -14,13 +19,8 @@ function App() {
   return (
     <div className = "w-full min-h-screen bg-zinc-900" >
      
-
-      <div style={myStyle} className='bg-cover bg-no-repeat w-full'>
-      <Header/>
-      <Hero/>
-      </div>
-      <DoctorsList/>
-      <Testimonials/>
+    <AllRoutes/>
+     
       
     </div>
   );

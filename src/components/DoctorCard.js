@@ -3,7 +3,7 @@ import React from "react";
 
 function DoctorCard({doctor}) {
     const {name, qualification, image} = doctor;
-  console.log(name)
+  
   return (
    
    <div className="max-w-xs bg-cyan-600  rounded-lg shadow mx-2 overflow-hidden">
